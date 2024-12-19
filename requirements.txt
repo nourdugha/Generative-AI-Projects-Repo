@@ -1,0 +1,14 @@
+langchain
+langchain-community
+langchain-core
+langchain-openai
+langchain-ollama
+langchain-groq
+langchain-huggingface
+sentence-transformers
+fastapi
+streamlit
+python-dotenv
+faiss-cpu
+chromadb
+pypdf
