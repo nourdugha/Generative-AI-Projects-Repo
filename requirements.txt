@@ -13,3 +13,6 @@ python-dotenv
 faiss-cpu
 chromadb
 pypdf
+arxiv
+wikipedia
+duckduckgo-search
