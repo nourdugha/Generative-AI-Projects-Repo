@@ -52,6 +52,31 @@ texts = text_splitter.split_text(raw_text)
 astra_vector_store.add_texts(texts[:50])
 astra_vector_index = VectorStoreIndexWrapper(vectorstore=astra_vector_store)
 
+# Now, we can use the vector index to perform search
+# Will ask two questions
+
+first_question = True
+while True:
+    if first_question:
+        question = input("Ask a question: ").strip()
+    else:
+        question = input("Ask another question: ").strip()
+    
+    if question.lower() == "exit":
+        break
+    if question.lower() == "":
+        continue
+
+    first_question = False
+    print(f"The question is {question}")
+    answer = astra_vector_index.query(question,llm=llm).strip()
+    print(f"The answer is: {answer}")
+
+    print("The First Document by relevance are : ")
+    for doc, socre in astra_vector_store.similarity_search_with_score(query=question,k=4):
+        print(f"THE DOC IS :{doc} : {socre}")
+
+
 
 
 
