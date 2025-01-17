@@ -7,6 +7,7 @@ langchain-groq
 langchain-chroma
 langchain-huggingface
 sentence-transformers
+langchain-aws
 fastapi
 streamlit
 python-dotenv
@@ -23,3 +24,9 @@ pytube
 datasets
 tiktoken
 gradio
+boto3
+awscli
+crewai
+crewai_tools
+mangum
+uvicorn
