@@ -51,4 +51,4 @@ def query_rag(query_text:str) -> QueryResponse:
             )
 
 if __name__ == "__main__":
-    query_rag("what is the Galaxy Design Agency?")
+    query_rag("tell me something about the Account Management and Support")
